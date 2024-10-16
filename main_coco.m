@@ -14,7 +14,7 @@ dataset_name = {'coco'};
   dataset = dataset_name{db};
   load(['./datasets/',dataset,'.mat']);  
 %% parameter setting 
- nbits = [12];
+ nbits = [4];
  lambda = [10];
  muta = [10];
  beta = [0.05];
@@ -33,9 +33,6 @@ for bi = 1:length(nbits)
                for r=1:length(beta)
                   for v = 1:turn
                     fprintf('Data preparing...\n\n'); 
-                    BHSHparam.nAnchors = 2000; 
-                   [XKTrain,XKTest] = Kernelize(I_tr,I_te,BHSHparam.nAnchors); 
-                   [YKTrain,YKTest] = Kernelize(T_tr, T_te,BHSHparam.nAnchors);
                     XTrain = I_tr';
                     YTrain = T_tr';
                     LTrain = L_tr;
