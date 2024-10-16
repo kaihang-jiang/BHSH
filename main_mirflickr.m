@@ -10,7 +10,7 @@ dataset_name = {'mirflickr25k'};
   dataset = dataset_name{db};
   load(['./datasets/',dataset,'.mat']);  
 %% parameter setting 
- nbits = [12];
+ nbits = [4];
  lambda = [10];
  muta = [10];
  beta = [0.1];
